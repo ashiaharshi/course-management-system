@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Built-By: LENOVO330S
+Build-Jdk: 17.0.5
+Implementation-Title: StudentMS
+Implementation-Version: 0.0.1-SNAPSHOT
+Implementation-Vendor-Id: com.mentorondemand
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-boot
+ -starter-parent/StudentMS
+Created-By: Maven Integration for Eclipse
+
