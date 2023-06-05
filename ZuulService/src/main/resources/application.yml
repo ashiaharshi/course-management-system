@@ -1,0 +1,45 @@
+#Name of the application
+spring:
+  application:
+    name: ZuulGateway
+
+#Eureka server url for registering
+#This is eureka client
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+#register url to server    
+
+#management:
+#   endpoint:
+#    routes:
+#      enabled: true
+      
+management:
+   endpoint:
+    web:
+     exposure:
+      include:  "*" 
+
+instance:
+  hostname: localhost
+  
+server:
+  port: 8989
+  
+zuul:
+  prefix: /service
+  routes:
+    CollegeMicroService:
+      path: /CollegeMicroService/**
+      service-id: CollegeMicroService
+    CourseMicroService:
+      path: /CourseMicroService/**
+      service-id: CourseMicroService
+    StudentMicroService:
+      path: /StudentMicroService/**
+      service-id: StudentMicroService
+     
